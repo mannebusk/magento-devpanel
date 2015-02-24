@@ -1,0 +1,46 @@
+{
+    "name": "ManneBusk/DevPanel",
+    "type": "magento-module",
+    "license":"MIT",
+    "description":"DevPanel Module",
+    "authors":[
+        {
+            "name":"Manne Busk",
+            "email":"mannebusk@gmail.com"
+        }
+    ],
+    "repositories": [
+    ],
+    "extra": {
+        "map": [
+            [
+                "app/code/community/ManneBusk/DevPanel/",
+                "app/code/community/ManneBusk/DevPanel/"
+            ],
+            [
+                "app/design/frontend/base/default/layout/devpanel.xml",
+                "app/design/frontend/base/default/layout/devpanel.xml"
+            ],
+            [
+                "app/design/frontend/base/default/template/devpanel/",
+                "app/design/frontend/base/default/template/devpanel/"
+            ],
+            [
+                "skin/frontend/base/default/devpanel/",
+                "skin/frontend/base/default/devpanel/"
+            ],
+            [
+                "js/devpanel/",
+                "js/devpanel/"
+            ],
+            [
+                "var/devpanel/",
+                "var/devpanel/"
+            ],
+            [
+                "app/etc/modules/ManneBusk_DevPanel.xml",
+                "app/etc/modules/ManneBusk_DevPanel.xml"
+            ]
+        ]
+    }
+}

@@ -1,0 +1,71 @@
+/// Styles for panel
+///
+/// @group      organism
+/// @author     Manne Busk <mannebusk@gmail.com>
+#dev-panel
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 900
+
+  height: 50vh
+
+  background: bgColor()
+  color: textColor()
+
+  &.closed
+    transform: translateY(100%)
+    .toggle
+      opacity: 0
+      transform: translateY(0%)
+      svg
+        fill: bgColor(dark)
+
+  .toggle
+    color: bgColor(dark)
+    padding: 0 .5em
+    font-size: 2em
+    position: absolute
+    bottom: 100%
+    right: 0
+    opacity: 1
+    transition: opacity .1s ease-out, transform .1s ease-out
+    transform: translateY(100%)
+
+    svg
+      fill: textColor(inverted)
+
+    &:hover
+      text-decoration: none
+      opacity: 1
+
+    &:active,
+    &:focus
+      outline: none
+
+  .devpanel-side-nav
+    width: 200px
+    margin-right: gutter()
+    float: left
+
+  .devpanel-content
+    display: table-cell
+    width: 9999px
+
+    .col
+      display: block
+
+    +bp($tablet)
+      .col
+        width: 49.5%
+        float: left
+        vertical-align: top
+
+        &:nth-of-type(odd)
+          padding-right: gutter() /2
+        &:nth-of-type(even)
+          padding-left: gutter() /2
+
+    .CodeMirror
+      height: 100%

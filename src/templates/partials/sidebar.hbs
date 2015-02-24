@@ -1,0 +1,19 @@
+---
+component: sidebar
+---
+{{! If a sidebar template is specified, use that one instead }}
+
+{{#if this.sidebarTemplate}}
+    {{partial this.sidebarTemplate}}
+{{else}}
+<nav>
+    <h3>Sidebar</h3>
+    <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+    </ul>
+</nav>
+{{/if}}

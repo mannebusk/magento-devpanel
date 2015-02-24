@@ -1,0 +1,23 @@
+<?php
+/**
+ *
+ * @see Mage_Core_Block_Template
+ */
+    $form = $this->getForm();
+    $name = $this->getFormName();
+    $help = Mage::helper('devpanel');
+?>
+<li>
+    <a href="#" data-devpanel-autofill="<?php echo $name ?>">
+        <span class="title"><?php echo $form['title'] ?></span>
+        <span class="selector muted"><?php echo $form['form'] ?></span>
+    </a>
+
+    <dl class="muted">
+        <dt>Submit:</dt>
+        <dd class="submit"><?php echo $form['submit'] ? 'true' : 'false' ?></dd>
+    </dl>
+    <a href="<?php echo Mage::getUrl('devpanel/autofill/delete', array('_query' => array('name' => $name))) ?>" data-autofill-delete-item="<?php echo $name ?>" class="close">
+        <?php echo $help->getIcon('adminui/cross93') ?>
+    </a>
+</li>

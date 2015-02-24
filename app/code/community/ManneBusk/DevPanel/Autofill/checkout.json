@@ -1,0 +1,107 @@
+{
+    "title": "Chuck Norris Checkout",
+    "form": "[data-checkout-form], #streamcheckout",
+    "submit": false,
+    "form_data": [
+        {
+            "name": "billing[firstname]",
+            "value": "Chuck"
+        },
+        {
+            "name": "billing[lastname]",
+            "value": "Norris"
+        },
+        {
+            "name": "billing[email]",
+            "value": "chucknorris@example.com"
+        },
+        {
+            "name": "billing[street][]",
+            "value": "Chucknorris Street 1"
+        },
+        {
+            "name": "billing[street][]",
+            "value": "c/o God"
+        },
+        {
+            "name": "billing[postcode]",
+            "value": "111 11"
+        },
+        {
+            "name": "billing[city]",
+            "value": "Cucktown"
+        },
+        {
+            "name": "billing[country_id]",
+            "value": "US"
+        },
+        {
+            "name": "billing[telephone]",
+            "value": "070 123 34 56"
+        },
+        {
+            "name": "billing[save_in_address_book]",
+            "value": "1"
+        },
+        {
+            "name": "billing[use_for_shipping]",
+            "value": "1"
+        },
+        {
+            "name": "checkout_method",
+            "value": "guest"
+        },
+        {
+            "name": "billing[customer_password]",
+            "value": ""
+        },
+        {
+            "name": "billing[confirm_password]",
+            "value": ""
+        },
+        {
+            "name": "shipping[address_id]",
+            "value": "2747"
+        },
+        {
+            "name": "shipping[firstname]",
+            "value": "Chuck"
+        },
+        {
+            "name": "shipping[lastname]",
+            "value": "Norris"
+        },
+        {
+            "name": "shipping[street][]",
+            "value": "Chucknorris Street 1"
+        },
+        {
+            "name": "shipping[street][]",
+            "value": ""
+        },
+        {
+            "name": "shipping[postcode]",
+            "value": "111 11"
+        },
+        {
+            "name": "shipping[city]",
+            "value": "Cucktown"
+        },
+        {
+            "name": "shipping[country_id]",
+            "value": "US"
+        },
+        {
+            "name": "shipping[telephone]",
+            "value": "070 123 34 56"
+        },
+        {
+            "name": "agreement[1]",
+            "value": "1"
+        },
+        {
+            "name": "agreement[3]",
+            "value": "1"
+        }
+    ]
+}

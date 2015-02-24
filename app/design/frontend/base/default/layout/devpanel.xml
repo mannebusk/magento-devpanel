@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<layout>
+    <devpanel>
+        <reference name="head">
+            <action method="addJs">
+                <file>devpanel/devpanel.js</file>
+            </action>
+            <action method="addCss">
+                <file>devpanel/css/devpanel.css</file>
+            </action>
+            <action method="addCss">
+                <file>devpanel/css/bower-components.css</file>
+            </action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="devpanel/panel" name="devpanel" template="devpanel/panel.phtml">
+                <block type="devpanel/tab_layout" name="devpanel.tab.layout" template="devpanel/tab/layout.phtml">
+                    <action method="setData">
+                        <key>active</key>
+                        <value>1</value>
+                    </action>
+                    <action method="setTitle">
+                        <value>Layout</value>
+                    </action>
+                </block>
+                <block type="devpanel/tab_store" name="devpanel.tab.store" template="devpanel/tab/stores.phtml">
+                    <action method="setTitle">
+                        <value>Stores</value>
+                    </action>
+                </block>
+                <block type="devpanel/tab" name="devpanel.tab.tools" template="devpanel/tab/tools.phtml">
+                    <action method="setTitle">
+                        <value>Tools</value>
+                    </action>
+                </block>
+            </block>
+        </reference>
+    </devpanel>
+</layout>

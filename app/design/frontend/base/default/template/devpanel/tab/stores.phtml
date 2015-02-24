@@ -1,0 +1,57 @@
+<?php
+/**
+ * Store info tab
+ *
+ * @see ManneBusk_DevPanel_Block_Tab_Store
+ */
+    $help = Mage::helper('devpanel');
+    $currentStore = Mage::app()->getStore();
+?>
+<div class="devpanel-content">
+    <div class="col" id="store-list">
+        <div class="menu-bar">
+            <input type="search" class="store-search" placeholder="Websites / Stores">
+            <a class="button icon" data-search-clear><?php echo $help->getIcon('adminui/cross93') ?></a>
+        </div>
+        <ul class="website-list plain devpanel-detail-list list">
+            <?php foreach($this->getWebsites() as $website) : ?>
+                <?php $stores = $this->getStoreCollection($website); ?>
+                <li>
+                    <h4 class="website"><?php echo $website->getName() ?></h4>
+                    <span class="id">#<?php echo $website->getId() ?></span>
+                    <span class="code"><?php echo $website->getCode() ?></span>
+
+                    <?php if (count($stores)) : ?>
+                    <ul class="devpanel-detail-list">
+                        <?php foreach ($stores as $store) : ?>
+                        <li>
+                            <h4 class="store"><?php echo $store->getName() ?></h4>
+                            <span class="store-id">#<?php echo $store->getId() ?></span>
+                            <span class="store-code"><?php echo $store->getCode() ?></span>
+
+                            <?php if ($store->getIsActive() && $store->getId() != Mage::app()->getStore()->getId()) : ?>
+                                <a class="f-right" href="<?php echo $store->getCurrentUrl(false) ?>"><small>switch</small></a>
+                            <?php endif; ?>
+                        </li>
+                        <?php endforeach; ?>
+                    </ul>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <div class="col">
+        <h3><?php echo $currentStore->getName() ?></h3>
+        <dl>
+            <dt>Currency:</dt>
+            <dd><?php echo $currentStore->getCurrentCurrency()->getCurrencyCode() ?></dd>
+
+            <dt>Locale:</dt>
+            <dd><?php echo $currentStore->getLocaleCode() ?></dd>
+
+            <dt>Time zone:</dt>
+            <dd><?php echo Mage::getStoreConfig('general/locale/timezone', $currentStore->getId()) ?></dd>
+        </dl>
+    </div>
+</div>
+

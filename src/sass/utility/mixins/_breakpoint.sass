@@ -1,0 +1,15 @@
+///
+/// Breakpoint mixin
+///
+/// @author Manne Busk <mannebusk@gmail.com>
+///
+=bp($from: null, $to: null)
+  @if $from != null and $to != null
+    @media all and (min-width: $from) and (max-width: $to)
+      @content
+  @else if $from != null and $to == null
+    @media all and (min-width: $from)
+      @content
+  @else if $from == null and $to != null
+    @media all and (max-width: $to)
+      @content

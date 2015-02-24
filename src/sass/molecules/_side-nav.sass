@@ -1,0 +1,26 @@
+///
+/// Side navigation (sub nav)
+///
+#dev-panel
+  .devpanel-side-nav
+    a
+      display: block
+      background: bgColor(dark)
+      color: textColor(inverted)
+      outline: 0
+      padding: gutter(small) gutter()
+      transition: background .1s ease-out
+
+      &:hover
+        text-decoration: none
+        background: lighten(bgColor(dark), 10)
+
+    li
+      &.active
+        a
+          background: lighten(bgColor(dark), 5)
+
+    li + li
+      a
+        border-top: 1px solid lighten(bgColor(dark), 10)
+

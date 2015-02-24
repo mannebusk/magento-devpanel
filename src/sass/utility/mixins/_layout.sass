@@ -1,0 +1,25 @@
+///
+/// Breakpoint mixin
+///
+/// @author Manne Busk <mannebusk@gmail.com>
+///
+=container($width: null, $gutter: null)
+  @if $width == null
+    @if map-has-key($size-viewport, xl)
+      $width: map-get($size-viewport, xl)
+    @else
+      @warn "Could not find map: $size-viewport"
+      $width: 1024px
+
+  @if $gutter == null
+    @if map-has-key($size-gutter, default)
+      $width: map-get($size-gutter, default)
+    @else
+      @warn "Could not find map: $size-gutter"
+      $gutter: 1rem
+
+  max-width: $width
+  margin-left: auto
+  margin-right: auto
+  padding-left: $gutter
+  padding-right: $gutter

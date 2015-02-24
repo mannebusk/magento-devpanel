@@ -1,0 +1,423 @@
+#dev-panel {
+  font-size: 16px; }
+
+#dev-panel html, #dev-panel body, #dev-panel div, #dev-panel span, #dev-panel applet, #dev-panel object, #dev-panel iframe, #dev-panel h1, #dev-panel h2, #dev-panel h3, #dev-panel h4, #dev-panel h5, #dev-panel h6, #dev-panel p, #dev-panel blockquote, #dev-panel pre, #dev-panel a, #dev-panel abbr, #dev-panel acronym, #dev-panel address, #dev-panel big, #dev-panel cite, #dev-panel code, #dev-panel del, #dev-panel dfn, #dev-panel em, #dev-panel img, #dev-panel ins, #dev-panel kbd, #dev-panel q, #dev-panel s, #dev-panel samp, #dev-panel small, #dev-panel strike, #dev-panel strong, #dev-panel sub, #dev-panel sup, #dev-panel tt, #dev-panel var, #dev-panel b, #dev-panel u, #dev-panel i, #dev-panel center, #dev-panel dl, #dev-panel dt, #dev-panel dd, #dev-panel ol, #dev-panel ul, #dev-panel li, #dev-panel fieldset, #dev-panel form, #dev-panel label, #dev-panel legend, #dev-panel table, #dev-panel caption, #dev-panel tbody, #dev-panel tfoot, #dev-panel thead, #dev-panel tr, #dev-panel th, #dev-panel td, #dev-panel article, #dev-panel aside, #dev-panel canvas, #dev-panel details, #dev-panel embed, #dev-panel figure, #dev-panel figcaption, #dev-panel footer, #dev-panel header, #dev-panel hgroup, #dev-panel menu, #dev-panel nav, #dev-panel output, #dev-panel ruby, #dev-panel section, #dev-panel summary, #dev-panel time, #dev-panel mark, #dev-panel audio, #dev-panel video, #dev-panel html:after, #dev-panel html:before, #dev-panel body:after, #dev-panel body:before, #dev-panel div:after, #dev-panel div:before, #dev-panel span:after, #dev-panel span:before, #dev-panel applet:after, #dev-panel applet:before, #dev-panel object:after, #dev-panel object:before, #dev-panel iframe:after, #dev-panel iframe:before, #dev-panel h1:after, #dev-panel h1:before, #dev-panel h2:after, #dev-panel h2:before, #dev-panel h3:after, #dev-panel h3:before, #dev-panel h4:after, #dev-panel h4:before, #dev-panel h5:after, #dev-panel h5:before, #dev-panel h6:after, #dev-panel h6:before, #dev-panel p:after, #dev-panel p:before, #dev-panel blockquote:after, #dev-panel blockquote:before, #dev-panel pre:after, #dev-panel pre:before, #dev-panel a:after, #dev-panel a:before, #dev-panel abbr:after, #dev-panel abbr:before, #dev-panel acronym:after, #dev-panel acronym:before, #dev-panel address:after, #dev-panel address:before, #dev-panel big:after, #dev-panel big:before, #dev-panel cite:after, #dev-panel cite:before, #dev-panel code:after, #dev-panel code:before, #dev-panel del:after, #dev-panel del:before, #dev-panel dfn:after, #dev-panel dfn:before, #dev-panel em:after, #dev-panel em:before, #dev-panel img:after, #dev-panel img:before, #dev-panel ins:after, #dev-panel ins:before, #dev-panel kbd:after, #dev-panel kbd:before, #dev-panel q:after, #dev-panel q:before, #dev-panel s:after, #dev-panel s:before, #dev-panel samp:after, #dev-panel samp:before, #dev-panel small:after, #dev-panel small:before, #dev-panel strike:after, #dev-panel strike:before, #dev-panel strong:after, #dev-panel strong:before, #dev-panel sub:after, #dev-panel sub:before, #dev-panel sup:after, #dev-panel sup:before, #dev-panel tt:after, #dev-panel tt:before, #dev-panel var:after, #dev-panel var:before, #dev-panel b:after, #dev-panel b:before, #dev-panel u:after, #dev-panel u:before, #dev-panel i:after, #dev-panel i:before, #dev-panel center:after, #dev-panel center:before, #dev-panel dl:after, #dev-panel dl:before, #dev-panel dt:after, #dev-panel dt:before, #dev-panel dd:after, #dev-panel dd:before, #dev-panel ol:after, #dev-panel ol:before, #dev-panel ul:after, #dev-panel ul:before, #dev-panel li:after, #dev-panel li:before, #dev-panel fieldset:after, #dev-panel fieldset:before, #dev-panel form:after, #dev-panel form:before, #dev-panel label:after, #dev-panel label:before, #dev-panel legend:after, #dev-panel legend:before, #dev-panel table:after, #dev-panel table:before, #dev-panel caption:after, #dev-panel caption:before, #dev-panel tbody:after, #dev-panel tbody:before, #dev-panel tfoot:after, #dev-panel tfoot:before, #dev-panel thead:after, #dev-panel thead:before, #dev-panel tr:after, #dev-panel tr:before, #dev-panel th:after, #dev-panel th:before, #dev-panel td:after, #dev-panel td:before, #dev-panel article:after, #dev-panel article:before, #dev-panel aside:after, #dev-panel aside:before, #dev-panel canvas:after, #dev-panel canvas:before, #dev-panel details:after, #dev-panel details:before, #dev-panel embed:after, #dev-panel embed:before, #dev-panel figure:after, #dev-panel figure:before, #dev-panel figcaption:after, #dev-panel figcaption:before, #dev-panel footer:after, #dev-panel footer:before, #dev-panel header:after, #dev-panel header:before, #dev-panel hgroup:after, #dev-panel hgroup:before, #dev-panel menu:after, #dev-panel menu:before, #dev-panel nav:after, #dev-panel nav:before, #dev-panel output:after, #dev-panel output:before, #dev-panel ruby:after, #dev-panel ruby:before, #dev-panel section:after, #dev-panel section:before, #dev-panel summary:after, #dev-panel summary:before, #dev-panel time:after, #dev-panel time:before, #dev-panel mark:after, #dev-panel mark:before, #dev-panel audio:after, #dev-panel audio:before, #dev-panel video:after, #dev-panel video:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  letter-spacing: initial;
+  text-transform: none;
+  border-radius: inherit; }
+#dev-panel html:after, #dev-panel html:before, #dev-panel body:after, #dev-panel body:before, #dev-panel div:after, #dev-panel div:before, #dev-panel span:after, #dev-panel span:before, #dev-panel applet:after, #dev-panel applet:before, #dev-panel object:after, #dev-panel object:before, #dev-panel iframe:after, #dev-panel iframe:before, #dev-panel h1:after, #dev-panel h1:before, #dev-panel h2:after, #dev-panel h2:before, #dev-panel h3:after, #dev-panel h3:before, #dev-panel h4:after, #dev-panel h4:before, #dev-panel h5:after, #dev-panel h5:before, #dev-panel h6:after, #dev-panel h6:before, #dev-panel p:after, #dev-panel p:before, #dev-panel blockquote:after, #dev-panel blockquote:before, #dev-panel pre:after, #dev-panel pre:before, #dev-panel a:after, #dev-panel a:before, #dev-panel abbr:after, #dev-panel abbr:before, #dev-panel acronym:after, #dev-panel acronym:before, #dev-panel address:after, #dev-panel address:before, #dev-panel big:after, #dev-panel big:before, #dev-panel cite:after, #dev-panel cite:before, #dev-panel code:after, #dev-panel code:before, #dev-panel del:after, #dev-panel del:before, #dev-panel dfn:after, #dev-panel dfn:before, #dev-panel em:after, #dev-panel em:before, #dev-panel img:after, #dev-panel img:before, #dev-panel ins:after, #dev-panel ins:before, #dev-panel kbd:after, #dev-panel kbd:before, #dev-panel q:after, #dev-panel q:before, #dev-panel s:after, #dev-panel s:before, #dev-panel samp:after, #dev-panel samp:before, #dev-panel small:after, #dev-panel small:before, #dev-panel strike:after, #dev-panel strike:before, #dev-panel strong:after, #dev-panel strong:before, #dev-panel sub:after, #dev-panel sub:before, #dev-panel sup:after, #dev-panel sup:before, #dev-panel tt:after, #dev-panel tt:before, #dev-panel var:after, #dev-panel var:before, #dev-panel b:after, #dev-panel b:before, #dev-panel u:after, #dev-panel u:before, #dev-panel i:after, #dev-panel i:before, #dev-panel center:after, #dev-panel center:before, #dev-panel dl:after, #dev-panel dl:before, #dev-panel dt:after, #dev-panel dt:before, #dev-panel dd:after, #dev-panel dd:before, #dev-panel ol:after, #dev-panel ol:before, #dev-panel ul:after, #dev-panel ul:before, #dev-panel li:after, #dev-panel li:before, #dev-panel fieldset:after, #dev-panel fieldset:before, #dev-panel form:after, #dev-panel form:before, #dev-panel label:after, #dev-panel label:before, #dev-panel legend:after, #dev-panel legend:before, #dev-panel table:after, #dev-panel table:before, #dev-panel caption:after, #dev-panel caption:before, #dev-panel tbody:after, #dev-panel tbody:before, #dev-panel tfoot:after, #dev-panel tfoot:before, #dev-panel thead:after, #dev-panel thead:before, #dev-panel tr:after, #dev-panel tr:before, #dev-panel th:after, #dev-panel th:before, #dev-panel td:after, #dev-panel td:before, #dev-panel article:after, #dev-panel article:before, #dev-panel aside:after, #dev-panel aside:before, #dev-panel canvas:after, #dev-panel canvas:before, #dev-panel details:after, #dev-panel details:before, #dev-panel embed:after, #dev-panel embed:before, #dev-panel figure:after, #dev-panel figure:before, #dev-panel figcaption:after, #dev-panel figcaption:before, #dev-panel footer:after, #dev-panel footer:before, #dev-panel header:after, #dev-panel header:before, #dev-panel hgroup:after, #dev-panel hgroup:before, #dev-panel menu:after, #dev-panel menu:before, #dev-panel nav:after, #dev-panel nav:before, #dev-panel output:after, #dev-panel output:before, #dev-panel ruby:after, #dev-panel ruby:before, #dev-panel section:after, #dev-panel section:before, #dev-panel summary:after, #dev-panel summary:before, #dev-panel time:after, #dev-panel time:before, #dev-panel mark:after, #dev-panel mark:before, #dev-panel audio:after, #dev-panel audio:before, #dev-panel video:after, #dev-panel video:before {
+  content: none; }
+#dev-panel article, #dev-panel aside, #dev-panel details, #dev-panel figcaption, #dev-panel figure, #dev-panel footer, #dev-panel header, #dev-panel hgroup, #dev-panel menu, #dev-panel nav, #dev-panel section {
+  display: block; }
+#dev-panel body {
+  line-height: 1; }
+#dev-panel ol, #dev-panel ul {
+  list-style: none; }
+#dev-panel blockquote, #dev-panel q {
+  quotes: none; }
+#dev-panel blockquote:before, #dev-panel blockquote:after {
+  content: "";
+  content: none; }
+#dev-panel q:before, #dev-panel q:after {
+  content: "";
+  content: none; }
+#dev-panel table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+[data-block-hint-active] {
+  transition: outline 0.2s ease-out;
+  outline: 2px solid #10A6DB !important; }
+
+[data-block-hint-hover] {
+  transition: outline 0.2s ease-out;
+  outline: 2px solid orange !important; }
+
+#block-info-list [data-block-hint-active] {
+  outline: none !important;
+  background: #10A6DB !important; }
+
+#dev-panel ul, #dev-panel ol {
+  margin: 0;
+  padding: 0; }
+  #dev-panel ul ul, #dev-panel ul ol, #dev-panel ol ul, #dev-panel ol ol {
+    margin-left: 1em; }
+#dev-panel li {
+  display: list-item;
+  list-style: none; }
+
+#dev-panel {
+  font-family: 'Source Code Pro', 'Courier New', monospace;
+  font-size: 1em;
+  color: #636363;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+  #dev-panel * {
+    font-family: 'Source Code Pro', 'Courier New', monospace; }
+  #dev-panel h1, #dev-panel h2, #dev-panel h3, #dev-panel h4, #dev-panel h5 {
+    font-weight: 700;
+    color: #636363;
+    text-transform: uppercase;
+    font-family: 'Source Code Pro', 'Courier New', monospace; }
+    #dev-panel h1 > *, #dev-panel h2 > *, #dev-panel h3 > *, #dev-panel h4 > *, #dev-panel h5 > * {
+      font-weight: inherit; }
+    #dev-panel h1.title, #dev-panel h2.title, #dev-panel h3.title, #dev-panel h4.title, #dev-panel h5.title {
+      background: #333;
+      color: #fefefe;
+      padding: 0.85em 1em;
+      font-size: 1em; }
+  #dev-panel h1 {
+    font-size: 36px; }
+  #dev-panel h2 {
+    font-size: 24px; }
+  #dev-panel h3 {
+    font-size: 19px; }
+  #dev-panel h4 {
+    font-size: 16px; }
+  #dev-panel h5 {
+    font-size: 16px; }
+  #dev-panel .muted {
+    color: #a7a7a7; }
+  #dev-panel a {
+    border: none;
+    text-decoration: none;
+    font-style: normal; }
+  #dev-panel .a-right {
+    text-align: right; }
+  #dev-panel .a-center {
+    text-align: center; }
+  #dev-panel .a-left {
+    text-align: left; }
+  #dev-panel .a-justify {
+    text-align: justify; }
+  #dev-panel .f-right {
+    float: right; }
+  #dev-panel .f-left {
+    float: left; }
+  #dev-panel .f-none {
+    float: none; }
+
+#dev-panel button.button, #dev-panel a.button {
+  background: #333;
+  border: none;
+  color: #fefefe;
+  padding: 0.5em 1em;
+  transition: background 0.1s ease-out, color 0.1s ease-out;
+  display: inline-block; }
+  #dev-panel button.button.active, #dev-panel a.button.active {
+    background: #5F894E; }
+    #dev-panel button.button.active:hover, #dev-panel a.button.active:hover {
+      background: #5F894E; }
+  #dev-panel button.button:hover, #dev-panel a.button:hover {
+    background: #4d4d4d; }
+  #dev-panel button.button.icon, #dev-panel a.button.icon {
+    font-size: 1.2em; }
+  #dev-panel button.button:active, #dev-panel button.button:focus, #dev-panel a.button:active, #dev-panel a.button:focus {
+    outline: none; }
+
+#dev-panel input[type="text"], #dev-panel input[type="email"], #dev-panel input[type="range"], #dev-panel input[type="search"], #dev-panel input[type="number"], #dev-panel input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  padding: 0 20px;
+  background: #333;
+  color: #fefefe;
+  font-family: 'Source Code Pro', 'Courier New', monospace; }
+  #dev-panel input[type="text"]::-webkit-input-placeholder, #dev-panel input[type="email"]::-webkit-input-placeholder, #dev-panel input[type="range"]::-webkit-input-placeholder, #dev-panel input[type="search"]::-webkit-input-placeholder, #dev-panel input[type="number"]::-webkit-input-placeholder, #dev-panel input[type="password"]::-webkit-input-placeholder {
+    color: #fefefe;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Source Code Pro', 'Courier New', monospace; }
+  #dev-panel input[type="text"]:-ms-input-placeholder, #dev-panel input[type="email"]:-ms-input-placeholder, #dev-panel input[type="range"]:-ms-input-placeholder, #dev-panel input[type="search"]:-ms-input-placeholder, #dev-panel input[type="number"]:-ms-input-placeholder, #dev-panel input[type="password"]:-ms-input-placeholder {
+    color: #fefefe;
+    font-weight: bold;
+    font-family: 'Source Code Pro', 'Courier New', monospace; }
+  #dev-panel input[type="text"]::-moz-placeholder, #dev-panel input[type="email"]::-moz-placeholder, #dev-panel input[type="range"]::-moz-placeholder, #dev-panel input[type="search"]::-moz-placeholder, #dev-panel input[type="number"]::-moz-placeholder, #dev-panel input[type="password"]::-moz-placeholder {
+    color: #fefefe;
+    font-weight: bold;
+    font-family: 'Source Code Pro', 'Courier New', monospace; }
+  #dev-panel input[type="text"]:-moz-placeholder, #dev-panel input[type="email"]:-moz-placeholder, #dev-panel input[type="range"]:-moz-placeholder, #dev-panel input[type="search"]:-moz-placeholder, #dev-panel input[type="number"]:-moz-placeholder, #dev-panel input[type="password"]:-moz-placeholder {
+    color: #fefefe;
+    font-weight: bold;
+    font-family: 'Source Code Pro', 'Courier New', monospace; }
+
+#dev-panel .message-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999; }
+#dev-panel .ajax-message {
+  background: #333;
+  border-right: 20px solid green;
+  color: #fefefe;
+  width: 100%;
+  padding: 1em 2em; }
+  #dev-panel .ajax-message.error {
+    border-color: red; }
+
+#dev-panel .devpanel-side-nav a {
+  display: block;
+  background: #333;
+  color: #fefefe;
+  outline: 0;
+  padding: 0.5em 1em;
+  transition: background 0.1s ease-out; }
+  #dev-panel .devpanel-side-nav a:hover {
+    text-decoration: none;
+    background: #4d4d4d; }
+#dev-panel .devpanel-side-nav li.active a {
+  background: #404040; }
+#dev-panel .devpanel-side-nav li + li a {
+  border-top: 1px solid #4d4d4d; }
+
+#dev-panel .devpanel-nav {
+  background: #333;
+  color: #fefefe;
+  padding: 0 2em;
+  height: 3em; }
+  #dev-panel .devpanel-nav ul {
+    padding: 0;
+    margin: 0; }
+    #dev-panel .devpanel-nav ul:after {
+      content: "";
+      display: table;
+      clear: both; }
+  #dev-panel .devpanel-nav li {
+    display: inline-block;
+    float: left;
+    height: 3em; }
+    #dev-panel .devpanel-nav li.active a, #dev-panel .devpanel-nav li.focus a {
+      background: #fefefe;
+      color: #636363;
+      outline: 0; }
+  #dev-panel .devpanel-nav a {
+    display: inline-block;
+    padding: 0.5em;
+    font-size: 1.2em;
+    color: #fefefe;
+    transition: background 0.1s ease-out, color 0.1s ease-out;
+    height: 100%; }
+    #dev-panel .devpanel-nav a:hover {
+      text-decoration: none;
+      background: #4d4d4d;
+      color: #fff; }
+
+#dev-panel .menu-bar {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 40px; }
+  #dev-panel .menu-bar:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #dev-panel .menu-bar .button {
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin: 0;
+    border-left: 1px solid #4d4d4d;
+    height: 40px; }
+  #dev-panel .menu-bar .icon {
+    vertical-align: middle;
+    line-height: 20px; }
+    #dev-panel .menu-bar .icon svg {
+      display: inline;
+      vertical-align: middle;
+      fill: #fefefe;
+      width: 16px;
+      height: 16px;
+      margin: auto; }
+  #dev-panel .menu-bar input {
+    -webkit-flex-grow: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+    height: 40px; }
+
+#dev-panel .devpanel-detail-list {
+  margin: 1em 0; }
+  #dev-panel .devpanel-detail-list h2, #dev-panel .devpanel-detail-list h3, #dev-panel .devpanel-detail-list h4, #dev-panel .devpanel-detail-list h5 {
+    margin: 0;
+    text-transform: none;
+    font-weight: bold; }
+    #dev-panel .devpanel-detail-list h2 .muted, #dev-panel .devpanel-detail-list h3 .muted, #dev-panel .devpanel-detail-list h4 .muted, #dev-panel .devpanel-detail-list h5 .muted {
+      font-size: 1em;
+      font-weight: 400; }
+  #dev-panel .devpanel-detail-list li {
+    padding: 0.5em 1em;
+    width: 100%;
+    position: relative; }
+    #dev-panel .devpanel-detail-list li:nth-of-type(odd) {
+      background: #EEF8FC; }
+    #dev-panel .devpanel-detail-list li .close {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      margin: auto;
+      padding: 10px;
+      height: 30px; }
+      #dev-panel .devpanel-detail-list li .close svg {
+        width: 10px;
+        height: 10px;
+        display: inline;
+        vertical-align: top; }
+
+#dev-panel dl {
+  margin: 0;
+  padding: 0; }
+  #dev-panel dl:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #dev-panel dl dt, #dev-panel dl dd {
+    float: left; }
+  #dev-panel dl dt {
+    clear: both;
+    margin-right: 0.5em;
+    font-weight: normal; }
+
+#dev-panel .website-list h4 {
+  display: inline-block;
+  margin: 0; }
+#dev-panel .website-list .devpanel-detail-list {
+  padding-left: 30px; }
+#dev-panel .website-list > li:nth-of-type(odd) {
+  background: none; }
+
+#dev-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  height: 50vh;
+  background: #fefefe;
+  color: #636363; }
+  #dev-panel.closed {
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%); }
+    #dev-panel.closed .toggle {
+      opacity: 0;
+      -webkit-transform: translateY(0%);
+          -ms-transform: translateY(0%);
+              transform: translateY(0%); }
+      #dev-panel.closed .toggle svg {
+        fill: #333; }
+  #dev-panel .toggle {
+    color: #333;
+    padding: 0 0.5em;
+    font-size: 2em;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    opacity: 1;
+    transition: opacity 0.1s ease-out, -webkit-transform 0.1s ease-out;
+    transition: opacity 0.1s ease-out, transform 0.1s ease-out;
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%); }
+    #dev-panel .toggle svg {
+      fill: #fefefe; }
+    #dev-panel .toggle:hover {
+      text-decoration: none;
+      opacity: 1; }
+    #dev-panel .toggle:active, #dev-panel .toggle:focus {
+      outline: none; }
+  #dev-panel .devpanel-side-nav {
+    width: 200px;
+    margin-right: 1em;
+    float: left; }
+  #dev-panel .devpanel-content {
+    display: table-cell;
+    width: 9999px; }
+    #dev-panel .devpanel-content .col {
+      display: block; }
+    @media all and (min-width: 768px) {
+      #dev-panel .devpanel-content .col {
+        width: 49.5%;
+        float: left;
+        vertical-align: top; }
+        #dev-panel .devpanel-content .col:nth-of-type(odd) {
+          padding-right: 0.5em; }
+        #dev-panel .devpanel-content .col:nth-of-type(even) {
+          padding-left: 0.5em; }
+ }
+    #dev-panel .devpanel-content .CodeMirror {
+      height: 100%; }
+
+#dev-panel .section {
+  height: calc(100% - 3em);
+  overflow: auto;
+  padding: 1em 1em 2em; }
+
+#dev-panel .cm-s-monokai.CodeMirror {
+  background: #272822;
+  color: #f8f8f2; }
+#dev-panel .cm-s-monokai div.CodeMirror-selected {
+  background: #49483E !important; }
+#dev-panel .cm-s-monokai .CodeMirror-gutters {
+  background: #272822;
+  border-right: 0px; }
+#dev-panel .cm-s-monokai .CodeMirror-guttermarker {
+  color: white; }
+#dev-panel .cm-s-monokai .CodeMirror-guttermarker-subtle {
+  color: #d0d0d0; }
+#dev-panel .cm-s-monokai .CodeMirror-linenumber {
+  color: #d0d0d0; }
+#dev-panel .cm-s-monokai .CodeMirror-cursor {
+  border-left: 1px solid #f8f8f0 !important; }
+#dev-panel .cm-s-monokai span.cm-comment {
+  color: #75715e; }
+#dev-panel .cm-s-monokai span.cm-atom {
+  color: #ae81ff; }
+#dev-panel .cm-s-monokai span.cm-number {
+  color: #ae81ff; }
+#dev-panel .cm-s-monokai span.cm-property, #dev-panel .cm-s-monokai span.cm-attribute {
+  color: #a6e22e; }
+#dev-panel .cm-s-monokai span.cm-keyword {
+  color: #f92672; }
+#dev-panel .cm-s-monokai span.cm-string {
+  color: #e6db74; }
+#dev-panel .cm-s-monokai span.cm-variable {
+  color: #a6e22e; }
+#dev-panel .cm-s-monokai span.cm-variable-2 {
+  color: #9effff; }
+#dev-panel .cm-s-monokai span.cm-def {
+  color: #fd971f; }
+#dev-panel .cm-s-monokai span.cm-bracket {
+  color: #f8f8f2; }
+#dev-panel .cm-s-monokai span.cm-tag {
+  color: #f92672; }
+#dev-panel .cm-s-monokai span.cm-link {
+  color: #ae81ff; }
+#dev-panel .cm-s-monokai span.cm-error {
+  background: #f92672;
+  color: #f8f8f0; }
+#dev-panel .cm-s-monokai .CodeMirror-activeline-background {
+  background: #373831 !important; }
+#dev-panel .cm-s-monokai .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important; }
+
+#dev-panel .examples {
+  padding: 1em; }
+  #dev-panel .examples li strong {
+    display: block; }
+  #dev-panel .examples li + li {
+    margin-top: 1em; }

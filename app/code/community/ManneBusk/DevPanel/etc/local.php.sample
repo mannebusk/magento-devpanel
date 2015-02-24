@@ -1,0 +1,12 @@
+<?php
+/**
+ * Local DevPanel Configuration
+ *
+ */
+$config = array(
+    /**
+     * Where you keep your global form autofill files.
+     *
+     */
+    'form_autofill_dir' => Mage::getModuleDir('', 'ManneBusk_DevPanel') . DS . 'Autofill',
+);

@@ -1,0 +1,41 @@
+/// Styles for form/input
+///
+/// @group      atom
+/// @author     Webbhuset <info@webbhuset.se>
+#dev-panel
+  input
+    &[type="text"],
+    &[type="email"],
+    &[type="range"],
+    &[type="search"],
+    &[type="number"],
+    &[type="password"]
+      -webkit-appearance: none
+      -moz-appearance: none
+      outline: none
+
+      width: 100%
+      border-radius: 0
+      border: none
+      padding: 0 20px
+      background: bgColor(dark)
+      color: textColor(inverted)
+      font-family: 'Source Code Pro', 'Courier New', monospace
+
+      &::-webkit-input-placeholder
+        color: textColor(inverted)
+        font-weight: bold
+        text-transform: uppercase
+        font-family: 'Source Code Pro', 'Courier New', monospace
+      &:-ms-input-placeholder
+        color: textColor(inverted)
+        font-weight: bold
+        font-family: 'Source Code Pro', 'Courier New', monospace
+      &::-moz-placeholder
+        color: textColor(inverted)
+        font-weight: bold
+        font-family: 'Source Code Pro', 'Courier New', monospace
+      &:-moz-placeholder
+        color: textColor(inverted)
+        font-weight: bold
+        font-family: 'Source Code Pro', 'Courier New', monospace

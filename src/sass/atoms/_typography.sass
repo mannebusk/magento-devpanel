@@ -1,0 +1,64 @@
+/// Styles for typography
+///
+/// @group      atom
+/// @author     Manne Busk <mannebusk@gmail.com>
+#dev-panel
+  font-family: 'Source Code Pro', 'Courier New', monospace
+  font-size: fontSize()
+  color: textColor()
+  transform: translate3d(0,0,0)
+
+  *
+    font-family: 'Source Code Pro', 'Courier New', monospace
+
+  h1,h2,h3,h4,h5
+    font-weight: 700
+    color: textColor()
+    text-transform: uppercase
+    font-family: 'Source Code Pro', 'Courier New', monospace
+
+    > *
+      font-weight: inherit
+
+    &.title
+      background: bgColor(dark)
+      color: textColor(inverted)
+      padding: .85em 1em
+      font-size: 1em
+
+  h1
+    font-size: 36px
+  h2
+    font-size: 24px
+  h3
+    font-size: 19px
+  h4
+    font-size: 16px
+  h5
+    font-size: 16px
+
+  .muted
+    color: textColor(muted)
+
+  a
+    border: none
+    text-decoration: none
+    font-style: normal
+
+  .a-
+    &right
+      text-align: right
+    &center
+      text-align: center
+    &left
+      text-align: left
+    &justify
+      text-align: justify
+
+  .f-
+    &right
+      float: right
+    &left
+      float: left
+    &none
+      float: none

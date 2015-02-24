@@ -1,0 +1,35 @@
+<?php
+/**
+ * Dev Panel
+ *
+ * @see ManneBusk_DevPanel_Block_Panel
+ */
+    $help = Mage::helper('devpanel')
+?>
+<section id="dev-panel" class="closed">
+    <a href="#" class="toggle"><?php echo $help->getIcon('dev') ?></a>
+    <nav class="devpanel-nav" data-tabcontroller="main">
+        <ul>
+            <?php foreach ($this->getTabs() as $name => $tab) : ?>
+                <li data-main-tab="<?php echo $name ?>" <?php echo $tab->isActive() ? 'class="active"' : '' ?>>
+                    <a href="#sec-tools"><?php echo $tab->getTitle() ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </nav>
+
+    <?php foreach ($this->getTabs() as $name => $tab) : ?>
+        <div class="section" data-main-tabcontent="<?php echo $name ?>">
+            <?php echo $this->getChildHtml($name) ?>
+        </div>
+    <?php endforeach; ?>
+
+    <script>
+        var devPanel = new DevPanel({
+            formAutoFill: <?php echo $this->getFormFillData() ?>
+        });
+    </script>
+
+    <div class="message-container">
+    </div>
+</section>

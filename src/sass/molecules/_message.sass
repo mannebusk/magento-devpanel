@@ -1,0 +1,22 @@
+/// Styles for message
+///
+/// @group      molecule
+/// @author     Manne Busk <mannebusk@gmail.com>
+#dev-panel
+  .message-container
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 99999
+
+  .ajax-message
+    background: bgColor(dark)
+    border-right: 20px solid green
+    color: textColor(inverted)
+    width: 100%
+    padding: 1em 2em
+
+
+    &.error
+      border-color: red
