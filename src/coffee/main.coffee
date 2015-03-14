@@ -53,6 +53,8 @@ $(->
   blockSearch         = new DevPanelList('block-info-list', ['name', 'class', 'template'], 'block-info-search')
   handleSearch        = new DevPanelList('layout-handle-list', ['handle'], 'layout-handle-search')
   storeSearch         = new DevPanelList('store-list', ['website', 'store', 'code', 'id', 'store-id', 'store-code'], 'store-search')
+  userFrontend        = new DevPanelList('frontend-login-list', ['name', 'email'], 'user-frontend-input')
+  userAdmin           = new DevPanelList('admin-login-list', ['name', 'email'], 'user-admin-input')
 
   ###
   # Block hints

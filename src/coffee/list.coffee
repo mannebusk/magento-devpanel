@@ -18,13 +18,6 @@ class DevPanelList
     options =
       valueNames: @attributes
       searchClass: @inputClass
-      plugins: [
-        ListFuzzySearch()
-      ]
-      location: 5
-      distance: 100
-      threshold: 0.5
-      multiSearch: true
 
     @list = new List(@id, options)
 
@@ -49,7 +42,7 @@ class DevPanelList
   # @return {DevPanelList}
   ###
   search: (string, attributes)->
-    @list.fuzzySearch.search(string, attributes)
+    @list.search(string, attributes)
     @listWrapper.find('.' + @inputClass).val(string)
     @save(string, attributes)
     @

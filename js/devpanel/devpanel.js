@@ -20657,12 +20657,7 @@ if (typeof exports == "object") {
       this.options = options;
       options = {
         valueNames: this.attributes,
-        searchClass: this.inputClass,
-        plugins: [ListFuzzySearch()],
-        location: 5,
-        distance: 100,
-        threshold: 0.5,
-        multiSearch: true
+        searchClass: this.inputClass
       };
       this.list = new List(this.id, options);
       this.listWrapper = $('#' + this.id);
@@ -20691,7 +20686,7 @@ if (typeof exports == "object") {
      */
 
     DevPanelList.prototype.search = function(string, attributes) {
-      this.list.fuzzySearch.search(string, attributes);
+      this.list.search(string, attributes);
       this.listWrapper.find('.' + this.inputClass).val(string);
       this.save(string, attributes);
       return this;
@@ -20793,7 +20788,7 @@ if (typeof exports == "object") {
   $ = jQuery.noConflict();
 
   $(function() {
-    var blockHints, blockSearch, handleSearch, storeSearch, xmlViewer;
+    var blockHints, blockSearch, handleSearch, storeSearch, userAdmin, userFrontend, xmlViewer;
     $('[data-tabcontroller]').tabController();
 
     /*
@@ -20802,6 +20797,8 @@ if (typeof exports == "object") {
     blockSearch = new DevPanelList('block-info-list', ['name', 'class', 'template'], 'block-info-search');
     handleSearch = new DevPanelList('layout-handle-list', ['handle'], 'layout-handle-search');
     storeSearch = new DevPanelList('store-list', ['website', 'store', 'code', 'id', 'store-id', 'store-code'], 'store-search');
+    userFrontend = new DevPanelList('frontend-login-list', ['name', 'email'], 'user-frontend-input');
+    userAdmin = new DevPanelList('admin-login-list', ['name', 'email'], 'user-admin-input');
 
     /*
      * Block hints
