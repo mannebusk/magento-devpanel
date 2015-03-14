@@ -20823,6 +20823,10 @@ if (typeof exports == "object") {
         return ajax = new DevPanelAjax(options).send();
       };
     })(this));
+
+    /*
+     * Config XML Viewer
+     */
     return xmlViewer = new DevPanelXmlViewer;
   });
 

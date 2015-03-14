@@ -3,7 +3,7 @@
 ///
 /// @author Manne Busk <mannebusk@gmail.com>
 ///
-=bp($from: null, $to: null)
+=bp($from: null, $to: null, $default: false)
   @if $from != null and $to != null
     @media all and (min-width: $from) and (max-width: $to)
       @content
@@ -13,3 +13,8 @@
   @else if $from == null and $to != null
     @media all and (max-width: $to)
       @content
+
+  // Set defualt for browsers without media query support
+  @if $default == true
+      .no-mediaqueries &
+        @content

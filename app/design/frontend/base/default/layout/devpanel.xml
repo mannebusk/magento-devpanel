@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <layout>
     <devpanel>
+
         <reference name="head">
             <action method="addJs">
                 <file>devpanel/devpanel.js</file>
@@ -12,8 +13,10 @@
                 <file>devpanel/css/bower-components.css</file>
             </action>
         </reference>
+
         <reference name="before_body_end">
             <block type="devpanel/panel" name="devpanel" template="devpanel/panel.phtml">
+
                 <block type="devpanel/tab_layout" name="devpanel.tab.layout" template="devpanel/tab/layout.phtml">
                     <action method="setData">
                         <key>active</key>
@@ -23,17 +26,44 @@
                         <value>Layout</value>
                     </action>
                 </block>
+
                 <block type="devpanel/tab_store" name="devpanel.tab.store" template="devpanel/tab/stores.phtml">
                     <action method="setTitle">
                         <value>Stores</value>
                     </action>
                 </block>
+
                 <block type="devpanel/tab" name="devpanel.tab.tools" template="devpanel/tab/tools.phtml">
                     <action method="setTitle">
                         <value>Tools</value>
                     </action>
+
+                    <block type="devpanel/tab" name="devpanel.tab.tools.xmlviewer" template="devpanel/tab/tools/xmlviewer.phtml">
+                        <action method="setTitle">
+                            <value>View Config XML</value>
+                        </action>
+                    </block>
+
+                    <block type="devpanel/tab" name="devpanel.tab.tools.formfiller" template="devpanel/tab/tools/formfiller.phtml">
+                        <action method="setTitle">
+                            <value>Form Autofill</value>
+                        </action>
+                    </block>
+
+                    <block type="devpanel/tab" name="devpanel.tab.tools.userlogin" template="devpanel/tab/tools/userlogin.phtml">
+                        <action method="setTitle">
+                            <value>Login</value>
+                        </action>
+                        <action method="setData">
+                            <key>active</key>
+                            <value>1</value>
+                        </action>
+                    </block>
+
                 </block>
+
             </block>
         </reference>
+
     </devpanel>
 </layout>

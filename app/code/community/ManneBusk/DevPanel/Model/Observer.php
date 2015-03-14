@@ -50,4 +50,20 @@ class ManneBusk_DevPanel_Model_Observer
             $config->saveConfig('dev/template/allow_symlink', true);
         }
     }
+
+    /**
+     * Login to admin by only posting username
+     *
+     */
+    public function actionPreDispatchAdmin()
+    {
+        $userName   = Mage::app()->getRequest()->getParam('user');
+        $session    = Mage::getSingleton('admin/session');
+        $user       = Mage::getModel('admin/user')->loadByUsername($userName);
+
+        if ($user && $user->getUsername()) {
+            $session->setUser($user);
+            $session->refreshAcl();
+        }
+    }
 }

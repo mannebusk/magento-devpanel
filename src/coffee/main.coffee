@@ -71,5 +71,8 @@ $(->
     ajax = new DevPanelAjax(options).send()
   )
 
+  ###
+  # Config XML Viewer
+  ###
   xmlViewer = new DevPanelXmlViewer
 )

@@ -12,68 +12,14 @@
     <ul>
         <li><a data-devpanel-ajax href="<?php echo Mage::getUrl('devpanel/cache/clear') ?>">Clear Cache</a></li>
 
-        <li class="active" data-tools-tab="xml"><a href="#">View Config XML</a></li>
-        <li data-tools-tab="formfill"><a href="#">Form Autofill</a></li>
+        <?php foreach ($this->getTabs() as $name => $tab) : ?>
+            <li data-tools-tab="<?php echo $name ?>" <?php echo $tab->isActive() ? 'class="active"' : '' ?>>
+                <a href="#sec-tools"><?php echo $tab->getTitle() ?></a>
+            </li>
+        <?php endforeach; ?>
     </ul>
 </nav>
 
-<!-- Form Autofiller  -->
-<div class="devpanel-content" data-tools-tabcontent="formfill" id="autofill-form-list">
-    <div class="menu-bar">
-        <input type="search" class="form-autofill-search" placeholder="Auto Fill Forms">
-        <a class="button icon" data-autofill-new><?php echo $help->getIcon('adminui/file84') ?></a>
-        <a href="<?php echo Mage::getUrl('devpanel/autofill/save') ?>" class="button icon" data-autofill-save style="display:none"><?php echo $help->getIcon('adminui/checkmark21') ?></a>
-        <a class="button icon" data-search-clear data-autofill-clear><?php echo $help->getIcon('adminui/cross93') ?></a>
-    </div>
-    <div data-autofill-editor></div>
-    <ul class="devpanel-detail-list list">
-        <?php foreach ($formFillData as $name => $form) : ?>
-            <?php 
-                echo $this->getLayout()->createBlock('core/template')
-                    ->setTemplate('devpanel/autofill/item.phtml')
-                    ->setForm($form)
-                    ->setFormName($name)
-                    ->toHtml();
-            ?>
-        <?php endforeach; ?>
-        <?php if (!count($formFillData)) : ?>
-            <li>No files found ...</li>
-        <?php endif; ?>
-    </ul>
-</div>
-
-<!-- Config XML Viewer -->
-<div class="devpanel-content" data-tools-tabcontent="xml">
-    <div class="menu-bar">
-    <input type="search" data-xmlviewer-input placeholder="xPath filter">
-        <a class="button icon" href="<?php echo Mage::getUrl('devpanel/config') ?>" data-xmlviewer-fetch><?php echo $help->getIcon('adminui/arrows97') ?></a>
-        <a class="button icon" data-xmlviewer-clear><?php echo $help->getIcon('adminui/cross93') ?></a>
-    </div>
-    <div data-xmlviewer-code>
-    </div>
-    <div class="examples" data-xmlviewer-examples>
-        <h4>Examples</h4>
-        <ul>
-            <li>
-                <span>Overrided blocks:</span>
-                <a href="#">//blocks/*/rewrite</a>
-            </li>
-            <li>
-                <span>Overrided frontend controllers:</span>
-                <a href="#">/config/frontend/routers/*/args/modules/*</a>
-            </li>
-            <li>
-                <span>Admin controllers:</span>
-                <a href="#">/config/admin/routers/adminhtml/args/modules/*</a>
-            </li>
-            <li>
-                <span>Registered community modules:</span>
-                <a href="#">/config/modules/*[codePool='community']</a>
-            </li>
-            <li>
-                <span>Event observers beginning with <em>"controller_"</em>:</span>
-                <a href="#">/config/*/events/*[starts-with(name(), 'controller_')]</a>
-            </li>
-        </ul>
-    </div>
-</div>
+<?php foreach ($this->getTabs() as $name => $tab) : ?>
+    <?php echo $this->getChildHtml($name) ?>
+<?php endforeach; ?>

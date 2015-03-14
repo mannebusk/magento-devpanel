@@ -1,0 +1,42 @@
+<?php
+/**
+ * Xml Viewer
+ *
+ * @see ManneBusk_DevPanel_Block_Tab_Xmlviewer
+ */
+    $help           = Mage::helper('devpanel');
+?>
+    <div class="devpanel-content" data-tools-tabcontent="<?php echo $this->getNameInLayout() ?>">
+    <div class="menu-bar">
+    <input type="search" data-xmlviewer-input placeholder="xPath filter">
+        <a class="button icon" href="<?php echo Mage::getUrl('devpanel/config') ?>" data-xmlviewer-fetch><?php echo $help->getIcon('adminui/arrows97') ?></a>
+        <a class="button icon" data-xmlviewer-clear><?php echo $help->getIcon('adminui/cross93') ?></a>
+    </div>
+    <div data-xmlviewer-code>
+    </div>
+    <div class="examples" data-xmlviewer-examples>
+        <h4>Examples</h4>
+        <ul>
+            <li>
+                <span>Overrided blocks:</span>
+                <a href="#">//blocks/*/rewrite</a>
+            </li>
+            <li>
+                <span>Overrided frontend controllers:</span>
+                <a href="#">/config/frontend/routers/*/args/modules/*</a>
+            </li>
+            <li>
+                <span>Admin controllers:</span>
+                <a href="#">/config/admin/routers/adminhtml/args/modules/*</a>
+            </li>
+            <li>
+                <span>Registered community modules:</span>
+                <a href="#">/config/modules/*[codePool='community']</a>
+            </li>
+            <li>
+                <span>Event observers beginning with <em>"controller_"</em>:</span>
+                <a href="#">/config/*/events/*[starts-with(name(), 'controller_')]</a>
+            </li>
+        </ul>
+    </div>
+</div>

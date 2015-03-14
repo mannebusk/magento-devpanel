@@ -66,5 +66,17 @@
             </core_block_abstract_to_html_after>
         </events>
     </frontend>
+    <adminhtml>
+        <events>
+            <adminhtml_controller_action_predispatch_start>
+                <observers>
+                    <auth>
+                        <class>devpanel/observer</class>
+                        <method>actionPreDispatchAdmin</method>
+                    </auth>
+                </observers>
+            </adminhtml_controller_action_predispatch_start>
+        </events>
+    </adminhtml>
 </config>
 
