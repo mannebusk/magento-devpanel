@@ -16,6 +16,7 @@ module.exports = function(grunt) {
     config: {
       src: 'src',
       skin: 'skin/frontend/base/default/devpanel',
+      skin_admin: 'skin/adminhtml/default/default/devpanel',
       js: 'js/devpanel',
       tmp: '.tmp'
     },
@@ -129,6 +130,10 @@ module.exports = function(grunt) {
       dist: {
         src: "<%= config.tmp %>/css/style.css",
         dest: "<%= config.skin %>/css/devpanel.css"
+      },
+      dist_admin: {
+        src: "<%= config.tmp %>/css/style.css",
+        dest: "<%= config.skin_admin %>/css/devpanel.css"
       }
     },
 
@@ -259,6 +264,7 @@ module.exports = function(grunt) {
     'wiredep:sass',
     'sass:dist',
     'autoprefixer:dist',
+    'autoprefixer:dist_admin',
     'coffee:dist',
     'bower_concat:dist',
     'concat:dist',

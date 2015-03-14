@@ -10,7 +10,7 @@
 <?php $this->getEntityInfo() ?>
 <nav class="devpanel-side-nav" data-tabcontroller="tools">
     <ul>
-        <li><a data-devpanel-ajax href="<?php echo Mage::getUrl('devpanel/cache/clear') ?>">Clear Cache</a></li>
+        <li><a data-devpanel-ajax href="<?php echo $help->getFrontUrl('devpanel/cache/clear') ?>">Clear Cache</a></li>
 
         <?php foreach ($this->getTabs() as $name => $tab) : ?>
             <li data-tools-tab="<?php echo $name ?>" <?php echo $tab->isActive() ? 'class="active"' : '' ?>>

@@ -9,6 +9,17 @@ class ManneBusk_DevPanel_Block_Panel
     extends Mage_Core_Block_Template
 {
     /**
+     * Render block
+     *
+     * @return string
+     */
+    public function renderView()
+    {
+        $this->setArea('frontend');
+        return parent::renderView();
+    }
+
+    /**
      * Prepare Layout
      *
      * @return Mage_Core_Block_Template

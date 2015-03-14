@@ -22,7 +22,7 @@
         <ul class="devpanel-detail-list list" >
             <?php foreach ($frontendUsers as $user) : ?>
                 <li>
-                    <a href="<?php echo Mage::getUrl('devpanel/login/frontend', array('_query' => array('user' => $user->getEmail()))) ?>">
+                    <a href="<?php echo $help->getFrontUrl('devpanel/login/frontend', array('_query' => array('user' => $user->getEmail()))) ?>">
                         <div class="name"><?php echo $user->getFirstname() ?> <?php echo $user->getLastname() ?></div>
                         <div class="email"><?php echo $user->getEmail()  ?></div>
                     </a>

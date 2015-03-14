@@ -17,7 +17,7 @@
         <dt>Submit:</dt>
         <dd class="submit"><?php echo $form['submit'] ? 'true' : 'false' ?></dd>
     </dl>
-    <a href="<?php echo Mage::getUrl('devpanel/autofill/delete', array('_query' => array('name' => $name))) ?>" data-autofill-delete-item="<?php echo $name ?>" class="close">
+    <a href="<?php echo $help->getFrontUrl('devpanel/autofill/delete', array('_query' => array('name' => $name))) ?>" data-autofill-delete-item="<?php echo $name ?>" class="close">
         <?php echo $help->getIcon('adminui/cross93') ?>
     </a>
 </li>

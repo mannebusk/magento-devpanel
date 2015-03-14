@@ -11,7 +11,7 @@
     <div class="menu-bar">
         <input type="search" class="form-autofill-search" placeholder="Auto Fill Forms">
         <a class="button icon" data-autofill-new><?php echo $help->getIcon('adminui/file84') ?></a>
-        <a href="<?php echo Mage::getUrl('devpanel/autofill/save') ?>" class="button icon" data-autofill-save style="display:none"><?php echo $help->getIcon('adminui/checkmark21') ?></a>
+        <a href="<?php echo $help->getFrontUrl('devpanel/autofill/save') ?>" class="button icon" data-autofill-save style="display:none"><?php echo $help->getIcon('adminui/checkmark21') ?></a>
         <a class="button icon" data-search-clear data-autofill-clear><?php echo $help->getIcon('adminui/cross93') ?></a>
     </div>
     <div data-autofill-editor></div>
@@ -19,6 +19,7 @@
         <?php foreach ($formFillData as $name => $form) : ?>
             <?php
                 echo $this->getLayout()->createBlock('core/template')
+                    ->setArea('frontend')
                     ->setTemplate('devpanel/autofill/item.phtml')
                     ->setForm($form)
                     ->setFormName($name)

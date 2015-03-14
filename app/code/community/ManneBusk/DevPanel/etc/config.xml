@@ -21,6 +21,24 @@
                 <class>ManneBusk_DevPanel_Model</class>
             </devpanel>
         </models>
+        <events>
+            <controller_action_layout_load_before>
+                <observers>
+                    <devpanel_layout_handle>
+                        <class>devpanel/observer</class>
+                        <method>addLayoutHandle</method>
+                    </devpanel_layout_handle>
+                </observers>
+            </controller_action_layout_load_before>
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <devpanel_layout_handle>
+                        <class>devpanel/observer</class>
+                        <method>addBlockHints</method>
+                    </devpanel_layout_handle>
+                </observers>
+            </core_block_abstract_to_html_after>
+        </events>
     </global>
     <frontend>
         <layout>
@@ -48,25 +66,16 @@
                     </devpanel_enable_symplinks>
                 </observers>
             </controller_action_predispatch>
-            <controller_action_layout_load_before>
-                <observers>
-                    <devpanel_layout_handle>
-                        <class>devpanel/observer</class>
-                        <method>addLayoutHandle</method>
-                    </devpanel_layout_handle>
-                </observers>
-            </controller_action_layout_load_before>
-            <core_block_abstract_to_html_after>
-                <observers>
-                    <devpanel_layout_handle>
-                        <class>devpanel/observer</class>
-                        <method>addBlockHints</method>
-                    </devpanel_layout_handle>
-                </observers>
-            </core_block_abstract_to_html_after>
         </events>
     </frontend>
     <adminhtml>
+        <layout>
+            <updates>
+                <devpanel>
+                    <file>devpanel.xml</file>
+                </devpanel>
+            </updates>
+        </layout>
         <events>
             <adminhtml_controller_action_predispatch_start>
                 <observers>
