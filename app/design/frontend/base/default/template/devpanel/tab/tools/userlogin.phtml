@@ -10,6 +10,9 @@
         ->addAttributeToSelect(array('firstname', 'lastname'));
     $adminUsers     = Mage::getModel('admin/user')
         ->getCollection();
+    $groups = Mage::getResourceSingleton('customer/group_collection')
+        ->toOptionHash();
+
     $urlModel = Mage::getModel('core/url');
 ?>
 <div class="devpanel-content" data-tools-tabcontent="<?php echo $this->getNameInLayout() ?>">
@@ -23,8 +26,12 @@
             <?php foreach ($frontendUsers as $user) : ?>
                 <li>
                     <a href="<?php echo Mage::getUrl('devpanel/login/frontend', array('_query' => array('user' => $user->getEmail()))) ?>">
-                        <div class="name"><?php echo $user->getFirstname() ?> <?php echo $user->getLastname() ?></div>
+                        <?php
+                            $groupName = isset($groups[$user->getGroupId()]) ? $groups[$user->getGroupId()] : 'N/A';
+                        ?>
+                        <div class="name"><?php echo $user->getFirstname() ?> <?php echo $user->getLastname() ?> (ID: <?php echo $user->getId()  ?> GROUP: <?php echo $groupName  ?>)</div>
                         <div class="email"><?php echo $user->getEmail()  ?></div>
+                        <div class="store"><?php echo Mage::app()->getWebsite($user->getWebsiteId())->getName()  ?></div>
                     </a>
                 </li>
             <?php endforeach; ?>
