@@ -1,6 +1,6 @@
 <?php
 /**
- * DePanel Observer
+ * DevPanel Observer
  *
  * @package ManneBusk_DevPanel
  * @module  ManneBusk

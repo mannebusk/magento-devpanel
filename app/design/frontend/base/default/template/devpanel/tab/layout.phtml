@@ -36,17 +36,20 @@
                         <?php if ($info->getAlias() && $info->getAlias() != $info->getName()) : ?>
                             <span class="alias muted">(<?php echo $info->getAlias() ?>)</span>
                         <?php endif; ?>
-
                     </h4>
                     <dl>
                         <dt><?php echo $this->__('Class') ?>:</dt>
                         <dd class="class"><?php echo $info->getClass() ?></dd>
 
-                        <?php if ($info->getTemplate()) : ?>
+                        <?php if ($template = $info->getTemplate()) : ?>
                         <dt><?php echo $this->__('Template') ?>:</dt>
-                        <dd class="template"><?php echo $info->getTemplate() ?></dd>
+                        <dd class="template"><?php echo $template ?></dd>
                         <?php endif; ?>
 
+                        <?php if ($package = $info->getPackage()) : ?>
+                        <dt><?php echo $this->__('Package') ?>:</dt>
+                        <dd class="template"><?php echo $package ?></dd>
+                        <?php endif; ?>
                     </dl>
                 </li>
             <?php endforeach; ?>

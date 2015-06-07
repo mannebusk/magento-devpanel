@@ -11,7 +11,7 @@ class ManneBusk_DevPanel_Block_Tab_Layout
     /**
      * Get info about all blocks
      *
-     * @return Core_Model_Mysql4_Website_Collection
+     * @return array
      */
     public function getBlockInfo()
     {
@@ -26,12 +26,32 @@ class ManneBusk_DevPanel_Block_Tab_Layout
             );
 
             if ($block instanceof Mage_Core_Block_Template) {
-                $info['template'] = $block->getTemplate();
+                $info = array_merge(
+                        $info,
+                        array(
+                            'template'  => $block->getTemplate(),
+                            'package'   => $this->_getPackageName($block->getTemplate()
+                        )
+                    )
+                );
             }
 
             $result[] = new Varien_Object($info);
         }
 
         return $result;
+    }
+
+    /**
+     * Retrieves the used package for a single template file.
+     *
+     * @param  string $filename
+     *
+     * @return string
+     */
+    protected function _getPackageName($filename)
+    {
+        return Mage::getSingleton('devpanel/package')
+            ->getFilePackage($filename, array('_type' => 'template'));
     }
 }
