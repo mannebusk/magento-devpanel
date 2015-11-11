@@ -9,7 +9,15 @@ var packageJSON       = require('./package.json');
 
 // Fetch all app vendor dependencies from package.json
 var dependencies      = Object.keys(packageJSON.dependencies);
-var appSettings       = packageJSON["app-settings"];
+
+var excludes = [
+  'open-iconic'
+];
+
+// Filter out excludes form dependencies
+dependencies = dependencies.filter(function(dep) {
+  return (excludes.indexOf(dep) === -1)
+});
 
 // General configuration
 var config = {
@@ -73,6 +81,11 @@ var config = {
       {
         test: /(\.css\.scss|\.sass)$/,
         loader: "style!css!autoprefixer!sass?outputStyle=expanded&indentedSyntax"
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline',
+        query: ['removeSvgTagAttrs=false']
       }
     ],
   },
@@ -82,6 +95,12 @@ var config = {
    */
   resolve: {
     root: __dirname + "/src/js/",
+    fallback: [
+      __dirname + "/node_modules/"
+    ],
+    alias: {
+      icon: "open-iconic/svg"
+    }
   }
 };
 
