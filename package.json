@@ -1,6 +1,6 @@
 {
   "name": "devpanel",
-  "description": "Development Magento Module",
+  "description": "Developer tool for Magento",
   "version": "0.1.0",
   "homepage": "",
   "author": {
@@ -15,24 +15,25 @@
     "node": ">=0.10"
   },
   "scripts": {
-    "test": "grunt assemble"
+    "dev": "webpack --progress --colors --watch"
   },
   "devDependencies": {
-    "assemble": "^0.4.42",
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^1.0.1",
-    "grunt-bower-concat": "^0.4.0",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-coffee": "^0.12.0",
-    "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-connect": "^0.8.0",
-    "grunt-contrib-copy": "^0.5.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-sass": "^0.17.0",
-    "grunt-wiredep": "^1.9.0",
-    "handlebars-helper-partial": "^0.1.3",
-    "load-grunt-tasks": "^1.0.0",
-    "time-grunt": "^1.0.0"
+    "autoprefixer-loader": "^3.1.0",
+    "babel-core": "^6.1.2",
+    "babel-preset-es2015": "^6.1.2",
+    "babel-preset-react": "^6.1.2",
+    "babel-loader": "^6.1.0",
+    "css-loader": "^0.18.0",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "html-webpack-plugin": "^1.6.1",
+    "node-sass": "^3.3.3",
+    "sass-loader": "^2.0.1",
+    "style-loader": "^0.12.4",
+    "webpack": "^1.12.2"
+  },
+  "dependencies": {
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
   },
   "licenses": [
     {
@@ -41,12 +42,8 @@
     }
   ],
   "keywords": [
-    "assemble",
-    "templates",
-    "handlebars",
-    "site generator",
-    "site builder",
-    "handlebars-helper-partial",
-    "grunt"
+    "magento",
+    "devpanel",
+    "developer tools"
   ]
 }
