@@ -4,10 +4,13 @@
 
         <reference name="head">
             <action method="addJs">
-                <file>devpanel/devpanel.js</file>
+                <file>devpanel/vendor.devpanel.js</file>
             </action>
-            <action method="addCss">
-                <file>devpanel/css/devpanel.css</file>
+            <action method="addJs">
+                <file>devpanel/app.devpanel.js</file>
+            </action>
+            <action method="addJs">
+                <file>devpanel/sass.devpanel.js</file>
             </action>
         </reference>
 
