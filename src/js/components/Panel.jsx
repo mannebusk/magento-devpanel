@@ -6,7 +6,11 @@
 import React      from 'react';
 import ReactDOM   from 'react-dom';
 
+import IconMixin  from 'mixins/IconMixin.jsx';
+
 var Panel = React.createClass({
+
+  mixins: [IconMixin],
 
   componentDidMount: function() {
     document.addEventListener('mousemove', this.toggleSneakPeak);
@@ -87,6 +91,8 @@ var Panel = React.createClass({
           className="sneaker"
           onClick={this.open}
         >
+          {this.getIcon(require("icon/browser.svg"))}
+          <h4 className="dp-text">dev</h4>
         </div>
       </div>
     );
