@@ -3,11 +3,14 @@
 ///
 /// @author Manne Busk <mannebusk@gmail.com>
 ///
+@import "mixins/reset"
 @import "config"
 @import "getters"
-$panelBg: #696F75
+@import "atoms/icon"
+@import "atoms/typography"
 
 #dev-panel
+  +reset
   position: fixed
   top: 0
   left: 0
@@ -36,10 +39,25 @@ $panelBg: #696F75
 
   .sneaker
     width: 2rem
-    height: 4rem
+    height: 10rem
     position: absolute
     left: 100%
     top: 50%
     transform: translateY(-50%)
-    background: $panelBg
+    background: bgColor()
     transition: all .2s ease-out
+    padding: .25rem
+    cursor: pointer
+
+    h4.dp-text
+      margin: 0 auto
+      width: 1em
+      word-wrap: break-word
+      padding-left: 10%
+      line-height: 1
+      color: textColor()
+      position: absolute
+      top: calc(50% + .5rem)
+      left: 50%
+      transform: translate(-50%, -50%)
+      // transform: rotate(-90deg) translate(-200%, 0)
