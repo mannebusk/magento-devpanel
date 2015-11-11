@@ -1,0 +1,45 @@
+///
+/// Dev Panel Style
+///
+/// @author Manne Busk <mannebusk@gmail.com>
+///
+@import "config"
+@import "getters"
+$panelBg: #696F75
+
+#dev-panel
+  position: fixed
+  top: 0
+  left: 0
+  transform: translateX(calc(-100% - 2rem))
+  z-index: 9999
+
+  width: 25vw
+  height: 100vh
+  min-width: 25rem
+  transition: transform .2s ease-out
+  overflow: visible
+
+  background: bgColor()
+
+  .dp-content
+    padding: gutter()
+
+  &.open
+    transform: translateX(0)
+    box-shadow: 2px 0 .5rem rgba(black, .3)
+    .sneaker
+      transform: translateX(-100%) scale(0)
+
+  &.sneak-peak
+    transform: translateX(-100%)
+
+  .sneaker
+    width: 2rem
+    height: 4rem
+    position: absolute
+    left: 100%
+    top: 50%
+    transform: translateY(-50%)
+    background: $panelBg
+    transition: all .2s ease-out

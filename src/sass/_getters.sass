@@ -1,0 +1,20 @@
+///
+/// Getter Functions For Maps
+///
+/// @author Manne Busk <mannebusk@gmail.com>
+///
+@function bgColor($key: default)
+  @return map-get($colorBg, $key)
+
+@function textColor($key: default)
+  @return map-get($colorText, $key)
+
+@function linkColor($key: default)
+  @return map-get($colorLink, $key)
+
+
+@function fontSize($key: default)
+  @return map-get($sizeText, $key)
+
+@function gutter($key: default)
+  @return map-get($sizeGutter, $key)

@@ -1,0 +1,43 @@
+/**
+ * Global Configurations
+ *
+ * @author Manne Busk <mannebusk@gmail.com>
+ */
+
+//---------------- COLORS -----------------//
+
+$colorBg: (
+  default: #696f75,
+);
+
+$colorText: (
+  default: #333,
+  muted: #a1a1a1,
+);
+
+$colorLink: (
+  default: #bad4ed,
+  hover: lighten(#bad4ed, 10),
+);
+
+
+
+//---------------- SIZES -----------------//
+
+$sizeText: (
+  default: 1rem,
+  large: 1.2rem,
+  small: .8rem,
+  h1: 2rem,
+  h2: 1.5rem,
+  h3: 1.2rem,
+  h4: 1rem,
+  h5: .8rem,
+);
+
+$sizeGutter: (
+  default: 1rem,
+  small: 1rem,
+  medium: 2rem,
+  large: 4rem,
+);
