@@ -44,6 +44,10 @@ var Panel = React.createClass({
    * @param MouseEvent e
    */
   outsideClickHandler: function(e) {
+    if (!this.state.open) {
+      return;
+    }
+
     let clicked = e.target;
     let panel   = this.refs.panel;
     let posNum  = panel.compareDocumentPosition(clicked);
