@@ -6,8 +6,11 @@
 @import "mixins/reset"
 @import "config"
 @import "getters"
-@import "atoms/icon"
 @import "atoms/typography"
+@import "atoms/icon"
+@import "atoms/button"
+@import "molecules/header"
+@import "molecules/menu"
 
 #dev-panel
   +reset
@@ -15,6 +18,7 @@
   top: 0
   left: 0
   transform: translateX(calc(-100% - 2rem))
+  // transform: translateX(0)
   z-index: 9999
 
   width: 25vw

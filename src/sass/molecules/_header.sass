@@ -1,0 +1,25 @@
+///
+/// Header Style
+///
+#dev-panel
+  .dp-header
+    border-bottom: 1px solid borderColor(edge)
+    display: flex
+    flex-direction: row
+
+    .dp-app-title
+      position: relative
+      background: bgColor(medium)
+      padding: .5rem 1rem
+      flex-grow: 1
+      font-weight: 700
+
+      > *
+        display: inline-block
+        vertical-align: middle
+
+    .dp-button
+      border-left: 1px solid borderColor(edge)
+
+      .icon svg
+        fill: textColor()
