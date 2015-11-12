@@ -8,10 +8,12 @@
 
 $colorBg: (
   default: #696f75,
+  medium: #535353,
 );
 
 $colorText: (
-  default: #a1a1a1,
+  default: #6F909C,
+  gray: #a1a1a1,
   muted: #c4c4c4,
 );
 
@@ -20,6 +22,10 @@ $colorLink: (
   hover: lighten(#bad4ed, 10),
 );
 
+$colorBorder: (
+  default: #5E6265,
+  edge: #5f5f5f
+);
 
 
 //---------------- SIZES -----------------//
