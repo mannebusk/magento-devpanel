@@ -86,7 +86,6 @@ var Panel = React.createClass({
         ref="panel"
         id="dev-panel"
       >
-        <h1>Dev Panel</h1>
         <div
           className="sneaker"
           onClick={this.open}
@@ -94,6 +93,7 @@ var Panel = React.createClass({
           {this.getIcon(require("icon/browser.svg"))}
           <h4 className="dp-text">dev</h4>
         </div>
+        {this.props.children}
       </div>
     );
   },
