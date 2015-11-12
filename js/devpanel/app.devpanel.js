@@ -174,7 +174,7 @@ webpackJsonp([1],{
 	              lineNumber: 28
 	            }
 	          },
-	          this.getIcon(__webpack_require__(200))
+	          this.getIcon(__webpack_require__(173))
 	        )
 	      ),
 	      _react2.default.createElement('div', {
@@ -267,7 +267,6 @@ webpackJsonp([1],{
 	    if (posNum <= 10 && posNum !== 0) {
 	      e.preventDefault();
 	      this.setState({ open: false });
-	      console.log(e);
 	    }
 	  },
 	
@@ -305,7 +304,7 @@ webpackJsonp([1],{
 	        id: 'dev-panel',
 	        __source: {
 	          fileName: '../../../../../src/js/components/Panel.jsx',
-	          lineNumber: 89
+	          lineNumber: 88
 	        }
 	      },
 	      _react2.default.createElement(
@@ -315,7 +314,7 @@ webpackJsonp([1],{
 	          onClick: this.open,
 	          __source: {
 	            fileName: '../../../../../src/js/components/Panel.jsx',
-	            lineNumber: 94
+	            lineNumber: 93
 	          }
 	        },
 	        this.getIcon(__webpack_require__(172)),
@@ -323,7 +322,7 @@ webpackJsonp([1],{
 	          'h4',
 	          { className: 'dp-text', __source: {
 	              fileName: '../../../../../src/js/components/Panel.jsx',
-	              lineNumber: 99
+	              lineNumber: 98
 	            }
 	          },
 	          'dev'
@@ -353,7 +352,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 200:
+/***/ 173:
 /***/ function(module, exports) {
 
 	module.exports = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 8 8\"><path d=\"M0 0v1h8v-1h-8zm0 2.97v1h8v-1h-8zm0 3v1h8v-1h-8z\" transform=\"translate(0 1)\"></path></svg>"
