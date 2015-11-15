@@ -4,7 +4,6 @@
  * @author Manne Busk <mannebusk@gmail.com>
  */
 var webpack           = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var packageJSON       = require('./package.json');
 
 // Fetch all app vendor dependencies from package.json
@@ -56,8 +55,6 @@ var config = {
 
     // Optimize occurence order
     new webpack.optimize.OccurenceOrderPlugin(),
-
-    // ExtractTextPlugin('style.css'),
   ],
 
   /**
