@@ -34,6 +34,7 @@
     "open-iconic": "^1.1.1",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
+    "react-redux": "^4.0.0",
     "svg-inline-loader": "^0.3.0"
   },
   "licenses": [
