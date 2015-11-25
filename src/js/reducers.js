@@ -20,7 +20,8 @@ export function panel(state, action) {
     state = {
       open: false,
       loading: false,
-      sneakPeak: false
+      sneakPeak: false,
+      showMenu: false
     };
   }
 
@@ -36,6 +37,13 @@ export function panel(state, action) {
     case panelConst.HIDE_SNEAKPEAK:
       return Object.assign({}, state, {
         sneakPeak: action.sneakPeak
+      });
+      break;
+
+    case panelConst.SHOW_MENU:
+    case panelConst.HIDE_MENU:
+      return Object.assign({}, state, {
+        showMenu: action.showMenu
       });
       break;
 

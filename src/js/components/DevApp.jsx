@@ -3,14 +3,47 @@
  *
  * @author Manne Busk <mannebusk@gmail.com>
  */
-import React        from 'react';
-import ReactDOM     from 'react-dom';
-import IconMixin    from 'mixins/IconMixin.jsx';
-import { connect }  from 'react-redux';
+import React          from 'react';
+import ReactDOM       from 'react-dom';
+import IconMixin      from 'mixins/IconMixin.jsx';
+import { connect }    from 'react-redux';
+import Menu           from 'components/layout/Menu.jsx';
+import Router         from 'components/Router.jsx';
+import {
+  openMenu,
+  closeMenu
+} from 'actions';
 
 let DevApp = React.createClass({
 
   mixins: [IconMixin],
+
+
+  /**
+   * Toggle menu open
+   */
+  toggleMenu: function() {
+    if (this.props.panel.showMenu) {
+      this.props.dispatch(closeMenu());
+    } else {
+      this.props.dispatch(openMenu());
+    }
+  },
+
+  /**
+   * Render Menu Component
+   *
+   * @return ReactElement
+   */
+  renderMenu: function() {
+    if (!this.props.panel.showMenu) {
+      return "";
+    }
+
+    return (
+      <Menu dispatch={this.props.dispatch} current={this.props.route}/>
+    );
+  },
 
   /**
    * Render Component
@@ -26,14 +59,12 @@ let DevApp = React.createClass({
           <span className="dp-app-title">
             <span>DevPanel</span>
           </span>
-          <button className="dp-button">
+          <button className="dp-button" onClick={this.toggleMenu}>
             {this.getIcon(require('icon/menu.svg'))}
           </button>
         </div>
-        <div
-          className="dp-content"
-        >
-        </div>
+        {this.renderMenu()}
+        <Router {...this.props}/>
       </div>
     );
   }
