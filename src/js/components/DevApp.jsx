@@ -3,9 +3,10 @@
  *
  * @author Manne Busk <mannebusk@gmail.com>
  */
-import React      from 'react';
-import ReactDOM   from 'react-dom';
-import IconMixin  from 'mixins/IconMixin.jsx';
+import React        from 'react';
+import ReactDOM     from 'react-dom';
+import IconMixin    from 'mixins/IconMixin.jsx';
+import { connect }  from 'react-redux';
 
 let DevApp = React.createClass({
 
@@ -38,4 +39,14 @@ let DevApp = React.createClass({
   }
 });
 
-export default DevApp;
+/**
+ * Select part of global state to be visible to component
+ *
+ * @param {Object} state
+ * @return {Object}
+ */
+function select(state) {
+  return state;
+}
+
+export default connect(select)(DevApp);

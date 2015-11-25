@@ -3,20 +3,37 @@
  *
  * @author Manne Busk <mannebusk@gmail.com>
  */
-import React      from 'react';
-import ReactDOM   from 'react-dom';
-
-import IconMixin  from 'mixins/IconMixin.jsx';
+import React                from 'react';
+import ReactDOM             from 'react-dom';
+import { connect }          from 'react-redux';
+import IconMixin            from 'mixins/IconMixin.jsx';
+import {
+  openPanel,
+  closePanel,
+  showPanelSneakPeak,
+  hidePanelSneakPeak
+} from 'actions';
 
 var Panel = React.createClass({
 
+  /**
+   * Mixins
+   *
+   * @var {Array}
+   */
   mixins: [IconMixin],
 
+  /**
+   * On component mount
+   */
   componentDidMount: function() {
     document.addEventListener('mousemove', this.toggleSneakPeak);
     document.addEventListener('click', this.outsideClickHandler);
   },
 
+  /**
+   * On component unmount
+   */
   componentWillUnmount: function() {
     document.removeEventListener(this.toggleSneakPeak);
     document.removeEventListener(this.outsideClickHandler);
@@ -31,10 +48,10 @@ var Panel = React.createClass({
     let padding = 50;
     let el = this.refs.panel;
 
-    if (!this.state.sneakPeak && e.x <= padding) {
-      this.setState({sneakPeak: true});
-    } else if (this.state.sneakPeak && e.x > padding) {
-      this.setState({sneakPeak: false});
+    if (!this.props.sneakPeak && e.x <= padding) {
+      this.props.dispatch(showPanelSneakPeak());
+    } else if (this.props.sneakPeak && e.x > padding) {
+      this.props.dispatch(hidePanelSneakPeak());
     }
   },
 
@@ -44,7 +61,7 @@ var Panel = React.createClass({
    * @param MouseEvent e
    */
   outsideClickHandler: function(e) {
-    if (!this.state.open) {
+    if (!this.props.open) {
       return;
     }
 
@@ -54,20 +71,8 @@ var Panel = React.createClass({
 
     if (posNum <= 10 && posNum !== 0) {
       e.preventDefault();
-      this.setState({open: false});
+      this.props.dispatch(closePanel());
     }
-  },
-
-  /**
-   * Get the initial state
-   *
-   * @return {Object}
-   */
-  getInitialState: function() {
-    return {
-      sneakPeak: false,
-      open: false
-    };
   },
 
   /**
@@ -78,9 +83,9 @@ var Panel = React.createClass({
   render: function() {
     let classNames = ["dev-panel"];
 
-    if (this.state.open) {
+    if (this.props.open) {
       classNames.push('open');
-    } else if (this.state.sneakPeak) {
+    } else if (this.props.sneakPeak) {
       classNames.push('sneak-peak');
     }
 
@@ -103,8 +108,18 @@ var Panel = React.createClass({
   },
 
   open: function() {
-    this.setState({open: true})
+    this.props.dispatch(openPanel());
   }
 });
 
-export default Panel;
+/**
+ * Select part of global state to be visible to component
+ *
+ * @param {Object} state
+ * @return {Object}
+ */
+function select(state) {
+  return state.panel;
+}
+
+export default connect(select)(Panel);
