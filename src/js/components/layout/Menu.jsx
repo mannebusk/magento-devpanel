@@ -10,6 +10,11 @@ import { goToRoute, closeMenu }  from 'actions';
 
 let Menu = React.createClass({
 
+  /**
+   * Mixins
+   *
+   * @var {Array}
+   */
   mixins: [IconMixin],
 
   /**
@@ -25,7 +30,7 @@ let Menu = React.createClass({
   /**
    * Render Component
    *
-   * @return ReactElement
+   * @return {ReactElement}
    */
   render: function() {
     return (
@@ -62,3 +67,31 @@ let Menu = React.createClass({
 });
 
 export default Menu;
+
+/**
+ * Open and close animations
+ *
+ * @var {Obejct}
+ */
+export let menuAnimation = {
+  open: {
+    animation: {
+      rotateY: 0,
+      translateX: 0,
+      translateZ: 0,
+      transformOrigin: ["20%", "center"]
+    },
+    easing: "ease-out",
+    duration: 250
+  },
+  close: {
+    animation: {
+      rotateY: -90,
+      translateX: "-10rem",
+      translateZ: 0,
+      transformOrigin: 0
+    },
+    easing: "ease-in",
+    duration: 250
+  }
+};

@@ -5,10 +5,17 @@
  */
 import React          from 'react';
 import ReactDOM       from 'react-dom';
-import IconMixin      from 'mixins/IconMixin.jsx';
 import { connect }    from 'react-redux';
-import Menu           from 'components/layout/Menu.jsx';
+
+import IconMixin      from 'mixins/IconMixin.jsx';
 import Router         from 'components/Router.jsx';
+import Menu,
+  { menuAnimation }   from 'components/layout/Menu.jsx';
+
+import {
+  VelocityTransitionGroup
+} from 'velocity-react';
+
 import {
   openMenu,
   closeMenu
@@ -17,7 +24,6 @@ import {
 let DevApp = React.createClass({
 
   mixins: [IconMixin],
-
 
   /**
    * Toggle menu open
@@ -37,11 +43,14 @@ let DevApp = React.createClass({
    */
   renderMenu: function() {
     if (!this.props.panel.showMenu) {
-      return "";
+      return null;
     }
 
     return (
-      <Menu dispatch={this.props.dispatch} current={this.props.route}/>
+      <Menu
+        dispatch={this.props.dispatch}
+        current={this.props.route}
+      />
     );
   },
 
@@ -63,7 +72,12 @@ let DevApp = React.createClass({
             {this.getIcon(require('icon/menu.svg'))}
           </button>
         </div>
-        {this.renderMenu()}
+        <VelocityTransitionGroup
+          enter={menuAnimation.open}
+          leave={menuAnimation.close}
+        >
+          {this.renderMenu()}
+        </VelocityTransitionGroup>
         <Router {...this.props}/>
       </div>
     );
