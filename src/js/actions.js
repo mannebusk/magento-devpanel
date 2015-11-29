@@ -16,7 +16,8 @@ export const panelConst = {
   HIDE_MENU: "PANEL_MENU_HIDE",
   START_LOADING: "PANEL_START_LOADING",
   STOP_LOADING: "PANEL_STOP_LOADING",
-  HIDE_LOADER: "PANEL_HIDE_LOADER"
+  HIDE_LOADER: "PANEL_HIDE_LOADER",
+  SET_TITLE: "PANEL_SET_TITLE"
 }
 
 export function goToRoute(route) {
@@ -87,5 +88,12 @@ export function hideLoader() {
   return {
     type: panelConst.HIDE_LOADER,
     showLoader: false
+  };
+}
+
+export function setTitle(title) {
+  return {
+    type: panelConst.SET_TITLE,
+    title: title
   };
 }

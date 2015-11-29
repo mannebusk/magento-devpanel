@@ -6,7 +6,7 @@
 import React      from 'react';
 import ReactDOM   from 'react-dom';
 import IconMixin  from 'mixins/IconMixin.jsx';
-import { goToRoute, closeMenu }  from 'actions';
+import { goToRoute, closeMenu, setTitle }  from 'actions';
 
 let Menu = React.createClass({
 
@@ -22,8 +22,9 @@ let Menu = React.createClass({
    *
    * @param {String} route
    */
-  goTo: function(route) {
+  goTo: function(route, title) {
     this.props.dispatch(goToRoute(route));
+    this.props.dispatch(setTitle(title));
     this.props.dispatch(closeMenu());
   },
 
@@ -37,25 +38,25 @@ let Menu = React.createClass({
       <div className="dp-menu">
         <ul>
           <li>
-            <a href="#" onClick={this.goTo.bind(this, 'layout')}>
+            <a href="#" onClick={this.goTo.bind(this, 'layout', 'Layout Debuger')}>
               {this.getIcon(require('icon/layers.svg'))}
               Layout Debuger
             </a>
           </li>
           <li>
-            <a href="#" onClick={this.goTo.bind(this, 'accounts')}>
+            <a href="#" onClick={this.goTo.bind(this, 'accounts', 'Accounts')}>
               {this.getIcon(require('icon/person.svg'))}
               Accounts
             </a>
           </li>
           <li>
-            <a href="#" onClick={this.goTo.bind(this, 'cache')}>
+            <a href="#" onClick={this.goTo.bind(this, 'cache', 'Cache')}>
               {this.getIcon(require('icon/flash.svg'))}
               Cache
             </a>
           </li>
           <li>
-            <a href="#" onClick={this.goTo.bind(this, 'configuration')}>
+            <a href="#" onClick={this.goTo.bind(this, 'configuration', 'Config XML')}>
               {this.getIcon(require('icon/code.svg'))}
               Configuration XML
             </a>

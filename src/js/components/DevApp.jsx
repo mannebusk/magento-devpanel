@@ -93,7 +93,7 @@ let DevApp = React.createClass({
           className="dp-header"
         >
           <span className="dp-app-title">
-            <span>DevPanel</span>
+            <span>{this.props.panel.title}</span>
           </span>
           <button className="dp-button" onClick={this.toggleMenu}>
             {this.getIcon(require('icon/menu.svg'))}

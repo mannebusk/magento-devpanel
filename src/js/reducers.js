@@ -22,7 +22,8 @@ export function panel(state, action) {
       loading: false,
       showLoader: false,
       sneakPeak: false,
-      showMenu: false
+      showMenu: false,
+      title: "DevPanel"
     };
   }
 
@@ -64,6 +65,12 @@ export function panel(state, action) {
     case panelConst.HIDE_LOADER:
       return Object.assign({}, state, {
         showLoader: action.showLoader,
+      });
+      break;
+
+    case panelConst.SET_TITLE:
+      return Object.assign({}, state, {
+        title: action.title,
       });
       break;
 
