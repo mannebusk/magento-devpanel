@@ -13,7 +13,10 @@ export const panelConst = {
   SHOW_SNEAKPEAK: "PANEL_SHOW_SNEAKPEAK",
   HIDE_SNEAKPEAK: "PANEL_HIDE_SNEAKPEAK",
   SHOW_MENU: "PANEL_MENU_SHOW",
-  HIDE_MENU: "PANEL_MENU_HIDE"
+  HIDE_MENU: "PANEL_MENU_HIDE",
+  START_LOADING: "PANEL_START_LOADING",
+  STOP_LOADING: "PANEL_STOP_LOADING",
+  HIDE_LOADER: "PANEL_HIDE_LOADER"
 }
 
 export function goToRoute(route) {
@@ -62,5 +65,27 @@ export function closeMenu() {
   return {
     type: panelConst.HIDE_MENU,
     showMenu: false
+  };
+}
+
+export function startLoading() {
+  return {
+    type: panelConst.START_LOADING,
+    loading: true,
+    showLoader: true
+  };
+}
+
+export function stopLoading() {
+  return {
+    type: panelConst.STOP_LOADING,
+    loading: false
+  };
+}
+
+export function hideLoader() {
+  return {
+    type: panelConst.HIDE_LOADER,
+    showLoader: false
   };
 }

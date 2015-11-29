@@ -9,6 +9,7 @@ import { connect }    from 'react-redux';
 
 import IconMixin      from 'mixins/IconMixin.jsx';
 import Router         from 'components/Router.jsx';
+import Loader         from 'components/Loader.jsx';
 import Menu,
   { menuAnimation }   from 'components/layout/Menu.jsx';
 
@@ -18,7 +19,8 @@ import {
 
 import {
   openMenu,
-  closeMenu
+  closeMenu,
+  hideLoader
 } from 'actions';
 
 let DevApp = React.createClass({
@@ -34,6 +36,13 @@ let DevApp = React.createClass({
     } else {
       this.props.dispatch(openMenu());
     }
+  },
+
+  /**
+   * Stop showing the loader bar
+   */
+  hideLoader: function() {
+    this.props.dispatch(hideLoader());
   },
 
   /**
@@ -55,13 +64,31 @@ let DevApp = React.createClass({
   },
 
   /**
+   * Render global loading indicator
+   *
+   * @return {ReactElement}
+   */
+  renderLoader: function() {
+    if (!this.props.panel.showLoader) {
+      return null
+    }
+    return (
+      <Loader
+        done={this.props.panel.loading ? false : true}
+        doneCallback={this.hideLoader}
+      />
+    );
+  },
+
+  /**
    * Render Component
    *
    * @return ReactElement
    */
   render: function() {
     return (
-      <div>
+      <div id="devpanel-app-container">
+        {this.renderLoader()}
         <div
           className="dp-header"
         >

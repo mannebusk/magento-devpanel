@@ -18,8 +18,9 @@ export function route(state = "", action) {
 export function panel(state, action) {
   if (!state) {
     state = {
-      open: false,
+      open: true,
       loading: false,
+      showLoader: false,
       sneakPeak: false,
       showMenu: false
     };
@@ -44,6 +45,25 @@ export function panel(state, action) {
     case panelConst.HIDE_MENU:
       return Object.assign({}, state, {
         showMenu: action.showMenu
+      });
+      break;
+
+    case panelConst.START_LOADING:
+      return Object.assign({}, state, {
+        loading: action.loading,
+        showLoader: action.showLoader
+      });
+      break;
+
+    case panelConst.STOP_LOADING:
+      return Object.assign({}, state, {
+        loading: action.loading,
+      });
+      break;
+
+    case panelConst.HIDE_LOADER:
+      return Object.assign({}, state, {
+        showLoader: action.showLoader,
       });
       break;
 
